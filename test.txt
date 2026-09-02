@@ -1,0 +1,3 @@
+Hola mundo Git
+Estoy aprendiendo a manejar la aplicación de Git, que es para llevar
+el control de versiones de mis archivos de mi proyecto de programación
