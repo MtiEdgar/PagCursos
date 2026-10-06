@@ -20,4 +20,4 @@ jobs:
           test -f index.html
           test -f css/styles.css
 
-          echo "Archivos principales encontrados correctamente."name: Test Prog2
+          echo "Archivos principales encontrados correctamente."
