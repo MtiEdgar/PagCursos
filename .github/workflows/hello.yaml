@@ -25,6 +25,6 @@ jobs:
         run: 
           echo "Verificando archivos principales..."
           test -f index.html
-          test -f css/styles.css
+          test -f css/styl.css
           
           echo "Archivos principales encontrados correctamente."
