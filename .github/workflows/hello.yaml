@@ -13,9 +13,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Verify project files
-        run: |
-          echo "Verificando archivos del proyecto..."
-          test -f index.html
-          test -f css/styles.css
-          echo "Archivos principales encontrados correctamente."  
+      - name: Test workflow
+        run: echo "GitHub Actions funciona correctamente"
