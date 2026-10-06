@@ -16,3 +16,12 @@ jobs:
 
       - name: Test workflow
         run: echo "GitHub Actions funciona correctamente"
+
+      - name: Test workflow
+        run: 
+          echo "Verificando archivos principales..."
+
+          test -f index.html
+          test -f css/styl.css
+
+          echo "Archivos principales encontrados correctamente."
