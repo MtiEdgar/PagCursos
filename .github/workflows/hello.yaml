@@ -20,8 +20,7 @@ jobs:
       - name: Test workflow
         run: 
           echo "Verificando archivos principales..."
-
           test -f index.html
           test -f css/styles.css
-
+          
           echo "Archivos principales encontrados correctamente."
