@@ -1,41 +1,30 @@
-name: Crear Pull Request
+#Esta fue creado con guia de un video de YT
+name: Test Prog2
 
 on:
   push:
     branches:
-      - prog1
       - prog2
 
+  pull_request:
+    branches: 
+      - main
+      
 jobs:
-  crear-pr:
+  build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
-      - name: Verificar si ya existe un Pull Request
-        id: verificar
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR=$(gh pr list \
-            --base main \
-            --head ${{ github.ref_name }} \
-            --state open \
-            --json number \
-            --jq 'length')
+      - name: Checkout repository
+        uses: actions/checkout@v7
 
-          echo "existe=$PR" >> "$GITHUB_OUTPUT"
+      - name: Test workflow
+        run: echo "GitHub Actions funciona correctamente"
 
-      - name: Crear Pull Request
-        if: steps.verificar.outputs.existe == '0'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr create \
-            --base main \
-            --head ${{ github.ref_name }} \
-            --title "PR: ${{ github.ref_name }} → main" \
-            --body "Pull Request creado automáticamente por GitHub Actions."
+      - name: Test workflow
+        run: 
+          echo "Verificando archivos principales..."
+          test -f index.html
+          test -f css/styles.css
+          
+          echo "Archivos principales encontrados correctamente."
