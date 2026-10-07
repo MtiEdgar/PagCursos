@@ -1,0 +1,46 @@
+name: Test Prog2
+
+on:
+  push:
+    branches:
+      - prog2
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Create Pull Request
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --base main \
+            --head prog2 \ 
+            --title "Integración de prog2 a main" \
+            --body "Pull Request generado automáticamente después de validar los cambios de prog2."
+
+# Lo anterior quiere decir:
+# name solamente es el nombre descriptivo del paso.
+# Aquí estamos creando una variable de entorno llamada GH_TOKEN. └── contiene el token que GitHub Actions proporciona automáticamente
+# es una expresión de GitHub Actions. "Obtén el token de autenticación que GitHub proporciona a este workflow."
+# "Ejecuta los siguientes comandos en la máquina virtual de GitHub Actions."
+# gh es GitHub CLI, es decir, la herramienta de línea de comandos de GitHub.
+# GitHub (gh) → Pull Request (pr) → crear (create). "Crea un Pull Request."
+# --base indica: ¿A qué rama queremos llevar los cambios?
+# --base main significa: La rama destino es main.
+# --head indica: ¿De qué rama vienen los cambios?
+# Crear un Pull Request de prog2 hacia main.
+# --body "Pull Request generado automáticamente después de validar los cambios de prog2." Es el contenido o descripción del Pull Request.
