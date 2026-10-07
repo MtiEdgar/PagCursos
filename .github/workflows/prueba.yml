@@ -1,4 +1,4 @@
-name: Test Prog2
+name: Prueba automatica de archivos
 
 on:
   push:
