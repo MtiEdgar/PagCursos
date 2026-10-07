@@ -1,4 +1,4 @@
-name: Prueba automatica
+name: Prueba_automatica
 
 on:
   push:
