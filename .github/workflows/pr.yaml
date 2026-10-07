@@ -28,7 +28,7 @@ jobs:
         run: |
           gh pr create \
             --base main \
-            --head prog2 \ 
+            --head prog2 \
             --title "Integración de prog2 a main" \
             --body "Pull Request generado automáticamente después de validar los cambios de prog2."
 
