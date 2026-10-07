@@ -1,0 +1,48 @@
+name: Test Prog2
+
+on:
+  push:
+    branches:
+      - prog2
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Verify index.html
+        run: |
+          echo "Verificando index.html..."
+          test -f index.html
+          echo "index.html encontrado."
+
+      - name: Verify styles.css
+        run: |
+          echo "Verificando styles.css..."
+          test -f css/styles.css
+          echo "styles.css encontrado."
+
+      - name: Verify HTML structure
+        run: |
+          echo "Verificando estructura HTML..."
+
+          grep -qi "<html" index.html
+          grep -qi "<head" index.html
+          grep -qi "<body" index.html
+
+          echo "Estructura HTML basica correcta."
+
+      - name: Verify CSS reference
+        run: |
+          echo "Verificando referencia a styles.css..."
+          
+          grep -q 'css/styles.css' index.html
+
+          echo "Referencia a styles.css encontrada."
