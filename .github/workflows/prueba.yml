@@ -1,4 +1,4 @@
-name: Prueba automatica de archivos
+name: Prueba automatica
 
 on:
   push:
