@@ -18,13 +18,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-#      - name: Test workflow
- #       run: echo "GitHub Actions funciona correctamente"
+      - name: Test workflow
+        run: echo "GitHub Actions funciona correctamente"
 
-#      - name: Test workflow
- #       run: 
-  #        echo "Verificando archivos principales..."
-   #       test -f index.html
-    #      test -f css/styles.css
+      - name: Test workflow
+        run: 
+          echo "Verificando archivos principales..."
+          test -f index.html
+          test -f css/styles.css
          
-      #    echo "Archivos principales encontrados correctamente."
+          echo "Archivos principales encontrados correctamente."
