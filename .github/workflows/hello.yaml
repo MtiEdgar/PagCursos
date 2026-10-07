@@ -1,4 +1,4 @@
-#Esta fue creado con guia de un video de YT
+
 name: Test Prog2
 
 on:
@@ -18,8 +18,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Test workflow
-        run: echo "GitHub Actions funciona correctamente"
+#      - name: Test workflow
+ #       run: echo "GitHub Actions funciona correctamente"
 
       - name: Test workflow
         run: 
