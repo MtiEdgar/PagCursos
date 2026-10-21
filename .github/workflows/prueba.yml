@@ -1,3 +1,4 @@
+# Test de pruebas unitarias
 name: Prueba_automatica
 
 on:
@@ -15,8 +16,10 @@ jobs:
 
     steps:
       - name: Checkout repository
+      # De donde sale esta direccion? y para que sirve
         uses: actions/checkout@v7
 
+# test Evalu una condicion y -f Comprueba que la ruta exista y corresponda a un archivo regular.
       - name: Verify index.html
         run: |
           echo "Verificando index.html..."
@@ -39,6 +42,7 @@ jobs:
 
           echo "Estructura HTML basica correcta."
 
+# grep -q Busca un texto y comunica si lo encontró mediante un código de salida.
       - name: Verify CSS reference
         run: |
           echo "Verificando referencia a styles.css..."
