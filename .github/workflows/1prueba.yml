@@ -8,9 +8,9 @@ on:
     branches:
       - prog2
 
-  pull_request:
-    branches:
-      - main
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   test:
@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-      # github.com/actions eñ checkout es para 
+      # github.com/actions el checkout es para 
         uses: actions/checkout@v7
 
-# test Evalu una condicion y -f Comprueba que la ruta exista y corresponda a un archivo regular.
+# test evalua una condicion y -f Comprueba que la ruta exista y corresponda a un archivo regular.
       - name: Verify index.html
         run: |
           echo "Verificando index.html..."
