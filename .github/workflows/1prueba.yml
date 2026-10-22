@@ -1,4 +1,6 @@
 # Test de pruebas unitarias
+# github.com/marketplace 
+
 name: Prueba_automatica
 
 on:
@@ -16,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-      # De donde sale esta direccion? y para que sirve
+      # github.com/actions eñ checkout es para 
         uses: actions/checkout@v7
 
 # test Evalu una condicion y -f Comprueba que la ruta exista y corresponda a un archivo regular.

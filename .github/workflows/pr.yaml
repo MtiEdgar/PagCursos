@@ -34,13 +34,18 @@ jobs:
 
 # Lo anterior quiere decir:
 # name solamente es el nombre descriptivo del paso.
-# Aquí estamos creando una variable de entorno llamada GH_TOKEN. └── contiene el token que GitHub Actions proporciona automáticamente
-# es una expresión de GitHub Actions. "Obtén el token de autenticación que GitHub proporciona a este workflow."
+# Aquí estamos creando una variable de entorno llamada GH_TOKEN. └── 
+# contiene el token que GitHub Actions proporciona automáticamente
+# es una expresión de GitHub Actions. "Obtén el token de autenticación 
+# que GitHub proporciona a este workflow."
 # "Ejecuta los siguientes comandos en la máquina virtual de GitHub Actions."
-# gh es GitHub CLI, es decir, la herramienta de línea de comandos de GitHub.
-# GitHub (gh) → Pull Request (pr) → crear (create). "Crea un Pull Request."
+# gh es GitHub CLI, es decir, la herramienta de línea de comandos 
+# de GitHub.
+# GitHub (gh) → Pull Request (pr) → crear (create). 
+# "Crea un Pull Request."
 # --base indica: ¿A qué rama queremos llevar los cambios?
 # --base main significa: La rama destino es main.
 # --head indica: ¿De qué rama vienen los cambios?
 # Crear un Pull Request de prog2 hacia main.
-# --body "Pull Request generado automáticamente después de validar los cambios de prog2." Es el contenido o descripción del Pull Request.
+# --body "Pull Request generado automáticamente después de validar 
+# los cambios de prog2." Es el contenido o descripción del Pull Request.
