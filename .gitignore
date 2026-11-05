@@ -73,5 +73,10 @@ practicar.html
 Tips Git.txt
 1prueba.yml
 2testmoure.yaml
+<<<<<<< HEAD
 hello.yaml
 pr.yaml
+=======
+
+1prueba.yaml
+>>>>>>> 5e2c1eafb343bc694fe3862a308e175bc0df5fca
