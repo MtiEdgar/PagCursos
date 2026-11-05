@@ -14,10 +14,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-      # github.com/actions el checkout es para 
+      # github.com/actions el checkout es para verificar la version del repositorio y poder hacer pruebas unitarias
+      # https://github.com/marketplace/actions/checkout
         uses: actions/checkout@v7
 
-# test evalua una condicion y -f Comprueba que la ruta exista y corresponda a un archivo regular.
+# test: evalua una condicion y -f Comprueba que la ruta exista y corresponda a un archivo regular.
       - name: Verify index.html
         run: |
           echo "Verificando index.html..."
@@ -30,10 +31,13 @@ jobs:
           test -f styles/styles.css
           echo "styles.css encontrado."
 
+# echo es para imprimir mensaje de texto en pantalla 
+# grep busca patron de texto en un archivo
+# -q es modo silencioso, no imprime nada en pantalla
+# -i Ignora mayúsculas y minúsculas
       - name: Verify HTML structure
         run: |
           echo "Verificando estructura HTML..."
-
           grep -qi "<html" index.html
           grep -qi "<head" index.html
           grep -qi "<body" index.html

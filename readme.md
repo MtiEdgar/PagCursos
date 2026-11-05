@@ -6,6 +6,8 @@ Esta página esta pensada en poner recursos gratis y para dar a conocer a alumno
 * y a gente que desee capacitarse de manera gratuita
 
 ### Recursos
+El OWASP Top 10 es un informe estándar de concienciación y un documento crítico que enumera los 10 riesgos de seguridad más graves a los que se enfrentan las aplicaciones web
 
+[Pagina OWASP](http://top10.owasp.org)
 
-[Link] (http://top10.owasp.org)
+![Security](img/elisaelias.jpg)
